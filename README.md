@@ -1,7 +1,7 @@
-# TP3-Adivina el numero
+# TP3-Adivina el número
 
 **Apellido y nombre:** Eleonora Luna 
-**Padron:** 96444
+**Padrón:** 96444
 
 **Repositorio de Github:** https://github.com/eleonoraluna/tp3.git
 
@@ -99,7 +99,7 @@ para enviar como respuesta. Es owner de un socket el cual utiliza para realizar 
 #### Reader
 Se encarga de leer el archivo que contiene los números para ser adivinados y los guarda. Contiene una función
 *nextNumber()* que devuelve el próximo número a ser adivinado. Es utilizado por el GameManager para ir creando
-a cada Player con un numero distinto para adivinar.
+a cada Player con un número distinto para adivinar.
 
 #### FileErrorException
 Representa las excepciones que son lanzadas en la clase Reader. Estas se lanzan cuando hubo un error al abrir el

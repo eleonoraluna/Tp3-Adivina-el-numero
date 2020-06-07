@@ -37,7 +37,7 @@ utiliza un socket de la clase socketTCP del cual es owner. También recibe las r
 dependiendo el comando que se le envió.
 
 #### Command
-### Help, Surrender y numberCommand
+##### Help, Surrender y numberCommand
 
 Help Surrender y numberCommand heredan de Command. Representan los comandos que el cliente tiene permitido enviar
 al servidor. Cada uno de ellos tiene una referencia al encoder, el cual utilizan para codificar,enviar y recibir los 

@@ -34,21 +34,16 @@ void Reader::separate_digits(int n, std::vector<int> &v) const{
 }
 
 bool Reader::no_repeated_digits(int n) const{
-	 bool no_repeated=true;
-	 int count=1;
 	 std::vector<int> num(3,0);
 	 this->separate_digits(n,num);
-	 while (no_repeated==true && count<3){
 		 for (int i=0; i<2; i++){
 			 for (int j=i+1; j<3; j++){
 				 if (num[i]==num[j]){
-					 no_repeated=false;
+					 return false;
 				 }
 			 }
-			 count++;
 		 }
-	 }
-	 return no_repeated;
+	 return true;
 }
 
 bool Reader::is_number_valid(int n) const{
@@ -65,7 +60,7 @@ bool Reader::is_number_valid(int n) const{
 	 return isvalid;
 }
 
-int Reader::readNumbers(){
+void Reader::readNumbers(){
 	std::string line;
 	int number;
 	while(!this->is_eof()){
@@ -80,7 +75,6 @@ int Reader::readNumbers(){
 		}
 		this->numbers.push_back(number);
 	}
-	return 0;
 }
 
 Reader::~Reader() {}

@@ -1,17 +1,21 @@
 #ifndef COMMON_SOCKETTCP_H_
 #define COMMON_SOCKETTCP_H_
 #include <string>
+#include <atomic>
 
 class Socket_TCP {
 public:
 	Socket_TCP();
+
+	//hace un bind y listen
 	explicit Socket_TCP(const std::string &port);
 	void bind(const std::string &port);
-	void listen();
+	void listen() const;
 	Socket_TCP accept() const;
 	void connect(const std::string &name,const std::string &port);
 	void recieve(char *buffer, int length) const;
 	void send(const char *buffer, int length) const;
+
 	//hace un shutdown y close forzado para cerrar el socket aceptador
 	void stop();
 	Socket_TCP(Socket_TCP&& other);

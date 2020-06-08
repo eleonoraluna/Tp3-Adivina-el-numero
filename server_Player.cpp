@@ -62,21 +62,16 @@ void Player::guess_number(int n){
 }
 
 bool Player::no_repeated_digits(int n) const{
-	 bool no_repeated=true;
-	 int count=1;
 	 std::vector<int> num(3,0);
 	 this->separate_digits(n,num);
-	 while (no_repeated==true && count<3){
 		 for (int i=0; i<2; i++){
 			 for (int j=i+1; j<3; j++){
 				 if (num[i]==num[j]){
-					 no_repeated=false;
+					 return false;
 				 }
 			 }
-			 count++;
 		 }
-	 }
-	 return no_repeated;
+	 return true;
 }
 
 bool Player::is_number_valid(int n) const{

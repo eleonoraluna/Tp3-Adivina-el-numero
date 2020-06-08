@@ -46,7 +46,7 @@ void Socket_TCP::bind(const std::string &port){
 	freeaddrinfo(ai_list);
 }
 
-void Socket_TCP::listen(){
+void Socket_TCP::listen() const{
 	 if (::listen(this->fd,MAX_CONNECTIONS)==-1){
 		throw Socket_TCPException();
 	 }

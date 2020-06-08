@@ -3,6 +3,7 @@
 #include "server_FileErrorException.h"
 #include "common_SocketTCPException.h"
 #include "server_InputReader.h"
+#include <exception>
 
 const int ARGSSERVER=3;
 
@@ -17,9 +18,12 @@ int main(int argc,char* argv[]){
 		}catch(const Socket_TCPException &e){
 			std::cout<<e.what()<<std::endl;
 			return 1;
+		}catch(const std::exception &e){
+			std::cout<<e.what()<<std::endl;
+			return 1;
 		}
 	}else{
-		std::cout<<"modo no soportado"<<std::endl;
+		std::cout<<"Error: argumentos inválidos."<<std::endl;
 		return 1;
 	}
 	return 0;

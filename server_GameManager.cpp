@@ -1,7 +1,6 @@
 #include <utility>
 #include <string>
 #include <vector>
-#include "server_FileErrorException.h"
 #include "common_SocketTCPException.h"
 #include "server_GameManager.h"
 
@@ -47,7 +46,6 @@ void Game_Manager::stop(){
 }
 
 void Game_Manager::run(){
-	 this->read_numbers();
 	 while (!this->isclosed){
 		 if (this->accept_player()!=1){
 		    this->is_player_finished();

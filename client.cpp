@@ -1,4 +1,5 @@
 #include <iostream>
+#include <exception>
 #include "common_SocketTCPException.h"
 #include "client_Game.h"
 
@@ -11,10 +12,11 @@ int main(int argc,char* argv[]){
 			game.run();
 		}catch(const Socket_TCPException &e){
 			std::cout<<e.what()<<std::endl;
-			//devuelve siempre 0 como es requerido
-			return 0;
+		}catch(const std::exception &e){
+			std::cout<<e.what()<<std::endl;
 		}
 	}
+	//retorna siempre 0 como es pedido
 	return 0;
 }
 

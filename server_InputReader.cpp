@@ -6,6 +6,7 @@ Input_Reader::Input_Reader(const std::string &port,const std::string &filename):
 manager(port,filename,this->statistics),printer(this->statistics){}
 
 void Input_Reader::run(){
+	 this->manager.read_numbers();
 	 this->manager.start();
 	 char exit=0;
 	 while (exit!='q'){

@@ -13,6 +13,12 @@ class Game_Manager: public Thread {
 public:
 	Game_Manager(const std::string &port,const std::string &filename,
 			     Statistics &statistics);
+
+	//hace uso del Reader para leer el archivo de números
+	//si el reader tuvo algun problema con los archivos
+	//lanza una FileErrorException
+	void read_numbers();
+
 	void run();
 
 	//cierra el socket aceptador y pone a isclosed en true
@@ -27,9 +33,6 @@ private:
 	std::vector<Player*> players;
 	std::atomic<bool> isclosed;
 
-	//hace uso del Reader para leer el archivo de números
-	void read_numbers();
-
 	//hace accept de clientes
 	//si recibe una excepcion de socket sale de la funcion
 	//devuelve 1 si recibe una excepcion indicando que cerraron
@@ -38,7 +41,7 @@ private:
 
 	//va chequeando si los jugadores terminaron o no
 	//si terminaron los elimina
-	//se ejecuta únicamente si accep_player devuelve 0
+	//se ejecuta únicamente si accept_player devuelve 0
 	void is_player_finished();
 };
 

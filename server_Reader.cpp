@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <exception>
 #include "server_Reader.h"
 #include "server_FileErrorException.h"
 
@@ -65,10 +66,6 @@ void Reader::readNumbers(){
 	int number;
 	while(!this->is_eof()){
 		std::getline(this->file,line);
-		if (line.find(" ")!=std::string::npos){
-			std::cerr<<"Error: archivo con números fuera de rango"<<std::endl;
-			throw FileErrorException();
-		}
 		number=std::stoi(line);
 		if (!this->is_number_valid(number)){
 		   throw FileErrorException();

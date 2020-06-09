@@ -3,13 +3,13 @@
 #include <string>
 #include "server_Decoder.h"
 
-const int SIZE_INVALID_NUM=52;
-const int SIZE_YOU_LOSE=8;
-const int SIZE_YOU_WIN=7;
-const int SIZE_ALL_BAD=5;
-const int SIZE_ONLY_GOOD=6;
-const int SIZE_ONLY_REGULAR=9;
-const int SIZE_REGULAR_AND_GOOD=17;
+#define SIZE_INVALID_NUM 52
+#define SIZE_YOU_LOSE 8
+#define SIZE_YOU_WIN 7
+#define SIZE_ALL_BAD 5
+#define SIZE_ONLY_GOOD 6
+#define SIZE_ONLY_REGULAR 9
+#define SIZE_REGULAR_AND_GOOD 17
 
 Decoder::Decoder(Socket_TCP socket):socket(std::move(socket)) {}
 

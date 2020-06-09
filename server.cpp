@@ -3,9 +3,8 @@
 #include "server_FileErrorException.h"
 #include "common_SocketTCPException.h"
 #include "server_InputReader.h"
-#include <exception>
 
-const int ARGSSERVER=3;
+#define ARGSSERVER 3
 
 int main(int argc,char* argv[]){
 	if(argc==ARGSSERVER){

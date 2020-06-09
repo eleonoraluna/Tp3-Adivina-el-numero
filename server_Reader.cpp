@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include <exception>
 #include "server_Reader.h"
 #include "server_FileErrorException.h"
 

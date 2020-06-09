@@ -5,7 +5,7 @@
 #include <string>
 #include "client_Encoder.h"
 
-const int SIZE_TYPE=1;
+#define SIZE_TYPE 1
 
 Encoder::Encoder(const std::string &name, const std::string &port) {
 	this->socket.connect(name,port);

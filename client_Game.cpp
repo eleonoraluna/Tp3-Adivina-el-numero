@@ -5,7 +5,7 @@
 #include "client_numberCommand.h"
 #include "client_Game.h"
 
-const int MAX_NUM=65535;
+#define MAX_NUM 65535
 
 Game::Game(const std::string &name, const std::string &port):
 encoder(name,port),surrender(false),is_playing(true){}

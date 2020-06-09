@@ -2,7 +2,7 @@
 #include <vector>
 #include "server_Player.h"
 
-const int MAX_ATTEMPTS=10;
+#define MAX_ATTEMPTS 10
 
 Player::Player(int number,Statistics &statistics,Socket_TCP socket):
 number(number),mynumber(3,0),attempts(0),isplaying(true),

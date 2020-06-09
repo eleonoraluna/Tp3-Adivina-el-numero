@@ -3,7 +3,7 @@
 #include "common_SocketTCPException.h"
 #include "client_Game.h"
 
-const int ARGSCLIENT=3;
+#define ARGSCLIENT 3
 
 int main(int argc,char* argv[]){
 	if(argc==ARGSCLIENT){

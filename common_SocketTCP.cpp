@@ -4,11 +4,10 @@
 #include <string.h>
 #include <sys/socket.h>
 #include <string>
-#include <exception>
 #include "common_SocketTCP.h"
 #include "common_SocketTCPException.h"
 
-const int MAX_CONNECTIONS=10;
+#define MAX_CONNECTIONS 10
 
 Socket_TCP::Socket_TCP(){
 	this->fd=-1;
